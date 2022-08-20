@@ -62,7 +62,7 @@
 			<img
 				src="./img/kamal.jpg"
 				alt="kamal sahmoud"
-				class="opacity-20"
+				class="opacity-20 rounded-full"
 				width="200px"
 				height="200px"
 			/>
@@ -80,7 +80,7 @@
 			</h2>
 		</div>
 	</div>
-	<p class="mt-6 text-slate-50 text-sm">
+	<p class="mt-6 glitch text-slate-50 text-sm">
 		Hello, i am web developer frontend / backend for more than 10 years, currently i am working in a
 		web agency in Rabat. I have acquired know-how and solid knowledge in all stages of website
 		creation. Autonomous and sociable, i can carry out a solo project as well as integrate myself
