@@ -69,7 +69,7 @@
 		</div>
 
 		<div class="bioigraphy col-span-2">
-			<h1 class="glitch uppercase text-3xl mb-8" id="main-title">
+			<h1 class="glitch uppercase text-5xl mb-8" id="main-title">
 				<span aria-hidden="true">Kamal Sahmoud</span>
 				Kamal Sahmoud
 				<span aria-hidden="true">Kamal Sahmoud</span>
@@ -84,7 +84,7 @@
 		Hello, i am web developer frontend / backend for more than 10 years, currently i am working in a
 		web agency in Rabat. I have acquired know-how and solid knowledge in all stages of website
 		creation. Autonomous and sociable, i can carry out a solo project as well as integrate myself
-		into an already existing team. Flexible on time and pace of work, I adapt to meet your needs and
+		into an already existing team. Flexible on time and pace of work, i adapt to meet your needs and
 		minimize your development costs. My qualities are good listening / understanding of customer
 		needs, seriousness in the realization, advice and decision support before development.
 	</p>
