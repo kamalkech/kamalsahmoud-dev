@@ -5,6 +5,9 @@ module.exports = {
 		extend: {
 			fontFamily: {
 				sans: ['Courier']
+			},
+			screens: {
+				sm: '320px'
 			}
 		}
 	},
