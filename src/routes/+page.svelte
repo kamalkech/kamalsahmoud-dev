@@ -63,7 +63,7 @@
 				<ProgressBar percentage={75} />
 			</div>
 			<div class="item">
-				<h3>html $ css</h3>
+				<h3>html / css</h3>
 				<ProgressBar percentage={70} />
 			</div>
 			<div class="item">
