@@ -62,6 +62,10 @@
 			rules: ['required'],
 			messages: {
 				required: 'The subject is required'
+			},
+			prefix: {
+				tag: 'div',
+				classes: [classPrefix]
 			}
 		},
 		{
@@ -102,3 +106,10 @@
 		classes: [classBtnCancel]
 	}}
 />
+
+<style>
+	:global(.error) {
+		color: red;
+		font-size: 0.75em;
+	}
+</style>
