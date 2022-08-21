@@ -1,6 +1,9 @@
 <script lang="ts">
 	import { fade } from 'svelte/transition';
+
+	// Import components.
 	import ProgressBar from '$lib/Components/ProgressBar.svelte';
+	import FormContact from '$lib/Components/Form.svelte';
 
 	let visible: boolean = true;
 	setInterval(() => {
@@ -99,10 +102,20 @@
 				<h3>symfony</h3>
 				<ProgressBar percentage={60} />
 			</div>
-<div class="item">
+			<div class="item">
 				<h3>laravel</h3>
 				<ProgressBar percentage={30} />
 			</div>
 		</div>
+	</div>
+	<!-- end skills -->
+
+	<div class="contact glitch">
+		<div class="title-section h-10 my-6">
+			<h2 class="normal-case text-2xl tracking-tight font-extrabold sm:text-2xl md:text-4xl">
+				Contact me
+			</h2>
+		</div>
+		<FormContact />
 	</div>
 </div>
