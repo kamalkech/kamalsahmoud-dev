@@ -57,7 +57,7 @@
 			{/if}
 		</div>
 
-		<div class="skills my-6 grid grid-cols-4 gap-4 text-yellow glitch">
+		<div class="skills my-6 grid grid-cols-4 gap-4 text-yellow glitch opacity-50">
 			<div class="item">
 				<h3>php</h3>
 				<ProgressBar percentage={75} />
