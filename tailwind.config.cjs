@@ -8,6 +8,11 @@ module.exports = {
 			},
 			screens: {
 				sm: '320px'
+			},
+			colors: {
+				green: '#32cd32',
+				yellow: '#FFE700',
+				red: '#FF0000'
 			}
 		}
 	},
