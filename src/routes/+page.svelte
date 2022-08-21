@@ -25,9 +25,9 @@
 
 		<div class="bioigraphy md:col-span-2">
 			<h1 class="glitch uppercase text-5xl md:mb-8 sm:mb-6" id="main-title">
-				<span aria-hidden="true">Kamal Sahmoud</span>
-				Kamal Sahmoud
-				<span aria-hidden="true">Kamal Sahmoud</span>
+				<span aria-hidden="true">Kamal</span>
+				Kamal
+				<span aria-hidden="true">Kamal</span>
 			</h1>
 
 			<h2 class="glitch normal-case text-2xl tracking-tight font-extrabold sm:text-2xl md:text-2xl">
