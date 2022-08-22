@@ -4,6 +4,7 @@
 	// Import components.
 	import ProgressBar from '$lib/Components/ProgressBar.svelte';
 	import FormContact from '$lib/Components/Form.svelte';
+	import { onMount } from 'svelte';
 
 	let visible: boolean = true;
 	setInterval(() => {

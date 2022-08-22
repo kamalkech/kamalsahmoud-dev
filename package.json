@@ -35,6 +35,8 @@
 	},
 	"type": "module",
 	"dependencies": {
+		"@sendgrid/mail": "^7.7.0",
+		"mailtrap": "^3.0.0",
 		"svelte-formly": "^2.0.1"
 	}
 }

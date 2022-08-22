@@ -1,5 +1,6 @@
 <script lang="ts">
 	import { Formly, type IField } from 'svelte-formly';
+	import type { ContactInput } from '$lib/util/types';
 
 	const classInput =
 		'mt-1 focus:ring-indigo-500 focus:border-indigo-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md p-4 mb-2 bg-zinc-900 opacity-50';
@@ -89,7 +90,13 @@
 	];
 
 	const onSubmit = ({ detail }: any) => {
-		console.log('detail', detail);
+		const data: ContactInput = {
+			fullName: detail.fullname,
+			email: detail.email,
+			subject: detail.subject,
+			message: detail.message
+		};
+		console.log('detail', data);
 	};
 </script>
 
