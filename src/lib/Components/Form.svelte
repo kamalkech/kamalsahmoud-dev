@@ -15,6 +15,7 @@
 		{
 			type: 'input',
 			name: 'fullname',
+			value: 'kamal',
 			attributes: {
 				type: 'text',
 				id: 'fullname',
@@ -34,6 +35,7 @@
 		{
 			type: 'input',
 			name: 'email',
+			value: 'kamal.develop@gmail.com',
 			attributes: {
 				type: 'email',
 				id: 'email',
@@ -53,6 +55,7 @@
 		{
 			type: 'input',
 			name: 'subject',
+			value: 'test sendblue',
 			attributes: {
 				type: 'text',
 				id: 'subject',
@@ -72,6 +75,7 @@
 		{
 			type: 'textarea',
 			name: 'message',
+			value: 'hello how are u',
 			attributes: {
 				type: 'text',
 				id: 'message',

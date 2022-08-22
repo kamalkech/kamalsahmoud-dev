@@ -1,78 +1,56 @@
-import type { RequestHandler } from '@sveltejs/kit';
+// import type { RequestHandler } from '@sveltejs/kit';
+import { env } from '$env/dynamic/private';
+import * as Sib from 'sib-api-v3-sdk';
 
-import * as SibApiV3Sdk from '@sendinblue/client';
-// SibApiV3Sdk.AccountApi()
-// const defaultClient = new SibApiV3Sdk.TransactionalEmailsApi;
-//
-// const apiKey = defaultClient.authentications['api-key'];
-// apiKey.apiKey =
-// 	'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';
+const key = env.SENDBLUE_KEY;
+const client = Sib.ApiClient.instance;
+const apiKey = client.authentications['api-key'];
+apiKey.apiKey = key;
 
 // /** @type {import('./$types').RequestHandler} */
-export function GET(data: any) {
-	console.log(data.url.searchParams.get('id'));
-	const result: any = {
-		name: 'foo'
-	};
-	return new Response(JSON.stringify(result));
-}
+// export function GET(data: any) {
+// 	console.log(data.url.searchParams.get('id'));
+// 	const result: any = {
+// 		name: 'foo'
+// 	};
+// 	return new Response(JSON.stringify(result));
+// }
 
 /** @type {import('./$types').Action} */
-export async function POST({ request, setHeaders, url }) {
+export async function POST({ request }: any) {
 	const values = await request.json();
-	console.log('values', values);
 
-	new SibApiV3Sdk.TransactionalEmailsApi()
-		.sendTransacEmail({
-			sender: { email: 'kamal.develop@gmail.com', name: 'kamal' },
-			subject: 'This is my default subject line',
-			htmlContent:
-				'<!DOCTYPE html><html><body><h1>My First Heading</h1><p>My first paragraph.</p></body></html>',
-			params: {
-				greeting: 'This is the default greeting',
-				headline: 'This is the default headline'
-			}
-		})
-		.then(
-			function (data) {
-				console.log(data);
-			},
-			function (error) {
-				console.log('error', error);
-			}
-		);
-	//  const username = /** @type {string} */ (values.get('username'));
-	//  const password = /** @type {string} */ (values.get('password'));
-	//
-	//  const user = await db.findUser(username);
-	//
-	//  if (!user) {
-	//    return {
-	//      status: 403,
-	//      errors: {
-	//        username: 'No user with this username'
-	//      }
-	//    };
-	//  }
-	//
-	//  if (user.password !== hash(password)) {
-	//    return {
-	//      status: 403,
-	//      errors: {
-	//        password: 'Incorrect password'
-	//      }
-	//    };
-	//  }
-	//
-	//  setHeaders({
-	//    'set-cookie': createSessionCookie(user.id)
-	//  });
-	//
-	//  return {
-	//    location: url.searchParams.get('redirectTo') ?? '/'
-	//  };
+	const input = {
+		from: 'maroc.develop@gmail.com',
+		email: 'kamal.develop@gmail.com',
+		subject: 'test sendblue',
+		message: 'salam alikom'
+	};
 
-	return new Response(JSON.stringify({ name: values.name }), {
+	const tranEmailApi = new Sib.TransactionalEmailsApi();
+
+	const sender = {
+		email: env.SENDBLUE_SENDER,
+		name: env.SENDBLUE_NAME
+	};
+	console.log('sender', sender);
+	const receivers = [
+		{
+			email: values.email
+		}
+	];
+
+	tranEmailApi.sendTransacEmail({
+		sender,
+		to: receivers,
+		subject: values.subject,
+		textContent: values.message,
+		htmlContent: values.message
+	})
+	.then(console.log)
+	.catch(console.log);
+
+	return new Response(JSON.stringify({ name: input.email }), {
 		status: 200
 	});
 }

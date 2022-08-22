@@ -36,8 +36,8 @@
 	"type": "module",
 	"dependencies": {
 		"@sendgrid/mail": "^7.7.0",
-		"@sendinblue/client": "^3.2.1",
 		"mailtrap": "^3.0.0",
+		"sib-api-v3-sdk": "^8.4.2",
 		"svelte-formly": "^2.0.1"
 	}
 }
