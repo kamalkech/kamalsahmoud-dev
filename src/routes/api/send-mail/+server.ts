@@ -7,50 +7,34 @@ const client = Sib.ApiClient.instance;
 const apiKey = client.authentications['api-key'];
 apiKey.apiKey = key;
 
-// /** @type {import('./$types').RequestHandler} */
-// export function GET(data: any) {
-// 	console.log(data.url.searchParams.get('id'));
-// 	const result: any = {
-// 		name: 'foo'
-// 	};
-// 	return new Response(JSON.stringify(result));
-// }
-
-/** @type {import('./$types').Action} */
-export async function POST({ request }: any) {
+/** @type {import('./$types').RequestHandler} */
+export async function POST({ request }) {
 	const values = await request.json();
-
-	const input = {
-		from: 'maroc.develop@gmail.com',
-		email: 'kamal.develop@gmail.com',
-		subject: 'test sendblue',
-		message: 'salam alikom'
-	};
 
 	const tranEmailApi = new Sib.TransactionalEmailsApi();
 
 	const sender = {
-		email: env.SENDBLUE_SENDER,
-		name: env.SENDBLUE_NAME
+		email: values.email
 	};
-	console.log('sender', sender);
 	const receivers = [
 		{
-			email: values.email
+			email: env.SENDBLUE_SENDER,
+			name: env.SENDBLUE_NAME
 		}
 	];
 
-	tranEmailApi.sendTransacEmail({
-		sender,
-		to: receivers,
-		subject: values.subject,
-		textContent: values.message,
-		htmlContent: values.message
-	})
-	.then(console.log)
-	.catch(console.log);
+	const result = await tranEmailApi
+		.sendTransacEmail({
+			sender,
+			to: receivers,
+			subject: values.subject,
+			textContent: values.message,
+			htmlContent: values.message
+		})
+		.then(console.log)
+		.catch(console.log);
 
-	return new Response(JSON.stringify({ name: input.email }), {
+	return new Response(JSON.stringify({ result }), {
 		status: 200
 	});
 }

@@ -94,7 +94,7 @@
 				<ProgressBar percentage={80} />
 			</div>
 			<div class="item">
-				<h3>ethereum / web3</h3>
+				<h3>ethereum</h3>
 				<ProgressBar percentage={50} />
 			</div>
 			<div class="item">
