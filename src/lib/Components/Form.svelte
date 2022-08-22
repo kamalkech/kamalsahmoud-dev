@@ -89,14 +89,22 @@
 		}
 	];
 
-	const onSubmit = ({ detail }: any) => {
-		const data: ContactInput = {
-			fullName: detail.fullname,
-			email: detail.email,
-			subject: detail.subject,
-			message: detail.message
-		};
-		console.log('detail', data);
+	const onSubmit = async ({ detail }: any) => {
+		const res = await fetch('/api/send-mail', {
+			method: 'POST',
+			body: JSON.stringify({
+				fullName: detail.fullname,
+				email: detail.email,
+				subject: detail.subject,
+				message: detail.message
+			}),
+			headers: {
+				'Content-type': 'application/json; charset=UTF-8'
+			}
+		});
+		const data = await res.json();
+
+		console.log('res', data);
 	};
 </script>
 
