@@ -46,7 +46,7 @@
 			<ProgressBar percentage={65} />
 		</div>
 		<div class="item">
-			<h3>angular</h3>
+			<h3>angular/nestjs</h3>
 			<ProgressBar percentage={65} />
 		</div>
 		<div class="item">
