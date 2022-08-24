@@ -4,3 +4,4 @@ export interface ContactInput {
 	subject: string;
 	message: string;
 }
+
