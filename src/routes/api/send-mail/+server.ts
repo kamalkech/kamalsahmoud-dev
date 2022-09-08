@@ -12,7 +12,7 @@ export async function POST({ request }: any) {
 	// get values form.
 	const values = await request.json();
 
-	sendSmtpEmail.subject = values.subject;
+	sendSmtpEmail.subject = 'Contact from kamal.gg'; // values.subject;
 	sendSmtpEmail.htmlContent = values.message;
 	sendSmtpEmail.sender = { name: values.fullname, email: values.email };
 	sendSmtpEmail.to = [{ email: env.SENDBLUE_SENDER, name: env.SENDBLUE_NAME }];

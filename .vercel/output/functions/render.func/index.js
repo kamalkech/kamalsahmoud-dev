@@ -64118,7 +64118,7 @@ async function POST({ request }) {
   apiKey.apiKey = env.SENDBLUE_KEY;
   let sendSmtpEmail = new SibApiV3Sdk.SendSmtpEmail();
   const values = await request.json();
-  sendSmtpEmail.subject = values.subject;
+  sendSmtpEmail.subject = "Contact from kamal.gg";
   sendSmtpEmail.htmlContent = values.message;
   sendSmtpEmail.sender = { name: values.fullname, email: values.email };
   sendSmtpEmail.to = [{ email: env.SENDBLUE_SENDER, name: env.SENDBLUE_NAME }];
@@ -66026,7 +66026,7 @@ var manifest = {
   assets: /* @__PURE__ */ new Set(["favicon.png", "img/bg.gif", "img/kamal.jpg", "img/phone-17-64.png"]),
   mimeTypes: { ".png": "image/png", ".gif": "image/gif", ".jpg": "image/jpeg" },
   _: {
-    entry: { "file": "_app/immutable/start-2d0ba1c2.js", "imports": ["_app/immutable/start-2d0ba1c2.js", "_app/immutable/chunks/index-cb480fde.js", "_app/immutable/chunks/index-7eb8000d.js"], "stylesheets": [] },
+    entry: { "file": "_app/immutable/start-471aeb49.js", "imports": ["_app/immutable/start-471aeb49.js", "_app/immutable/chunks/index-cb480fde.js", "_app/immutable/chunks/index-7eb8000d.js"], "stylesheets": [] },
     nodes: [
       () => Promise.resolve().then(() => (init__(), __exports)),
       () => Promise.resolve().then(() => (init__2(), __exports2)),
