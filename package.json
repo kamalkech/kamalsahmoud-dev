@@ -15,7 +15,7 @@
 	"devDependencies": {
 		"@playwright/test": "^1.25.0",
 		"@sveltejs/adapter-auto": "next",
-    "@sveltejs/adapter-vercel": "next",
+		"@sveltejs/adapter-vercel": "next",
 		"@sveltejs/kit": "next",
 		"@typescript-eslint/eslint-plugin": "^5.27.0",
 		"@typescript-eslint/parser": "^5.27.0",
@@ -39,6 +39,7 @@
 		"@sendgrid/mail": "^7.7.0",
 		"mailtrap": "^3.0.0",
 		"sib-api-v3-sdk": "^8.4.2",
+		"sib-api-v3-typescript": "^2.2.2",
 		"svelte-formly": "^2.0.1"
 	}
 }

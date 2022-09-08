@@ -1,6 +1,6 @@
 <script lang="ts">
 	import { Formly, type IField } from 'svelte-formly';
-	import type { ContactInput } from '$lib/util/types';
+	// import type { ContactInput } from '$lib/util/types';
 
 	let showModal: boolean = false;
 
@@ -17,6 +17,7 @@
 		{
 			type: 'input',
 			name: 'fullname',
+			value: 'kamal',
 			attributes: {
 				type: 'text',
 				id: 'fullname',
@@ -36,6 +37,7 @@
 		{
 			type: 'input',
 			name: 'email',
+			value: 'kamal@email.com',
 			attributes: {
 				type: 'email',
 				id: 'email',
@@ -43,7 +45,7 @@
 				placeholder: 'Email',
 				autocomplete: 'off'
 			},
-			rules: ['required'],
+			rules: ['required', 'email'],
 			messages: {
 				required: 'The email is required'
 			},
@@ -55,6 +57,7 @@
 		{
 			type: 'input',
 			name: 'subject',
+			value: 'test',
 			attributes: {
 				type: 'text',
 				id: 'subject',
@@ -74,6 +77,7 @@
 		{
 			type: 'textarea',
 			name: 'message',
+			value: 'salam alikom',
 			attributes: {
 				type: 'text',
 				id: 'message',
