@@ -1,5 +1,5 @@
 <script lang="ts">
-	import FormContact from '$lib/Components/Form.svelte'
+	import FormContact from '$lib/Components/Form.svelte';
 </script>
 
 <!-- Start contact form -->
