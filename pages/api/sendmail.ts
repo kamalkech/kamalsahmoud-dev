@@ -18,22 +18,26 @@ export default async function handler(
   let sendSmtpEmail = new SibApiV3Sdk.SendSmtpEmail();
   sendSmtpEmail.subject = values.subject;
   sendSmtpEmail.htmlContent = values.message;
-  sendSmtpEmail.sender = { name: values.fullname, email: values.email };
-  sendSmtpEmail.to = [{ email: "maroc.develop@gmail.com", name: "kamal.gg" }];
+  // sendSmtpEmail.sender = { name: values.fullname, email: values.email };
+  sendSmtpEmail.sender = {
+    name: values.fullname,
+    email: values.email, // "maroc.develop@gmail.com",
+  };
+  sendSmtpEmail.to = [{ email: "maroc.develop@gmail.com", name: "kamal" }];
 
-  let name = "";
-  apiInstance.sendTransacEmail(sendSmtpEmail).then(
-    function (data) {
-      console.log(
-        "API called successfully. Returned data: " + JSON.stringify(data)
-      );
-      name = "success";
-    },
-    function (error) {
-      console.error(error);
-      name = "error";
-    }
-  );
+  // apiInstance.sendTransacEmail(sendSmtpEmail).then( function (data) {
+  //     console.log(
+  //       "API called successfully. Returned data: " + JSON.stringify(data)
+  //     );
+  //     name = "success";
+  //   },
+  //   function (error) {
+  //     console.error(error);
+  //     name = "error";
+  //   }
+  // );
+  const response = await apiInstance.sendTransacEmail(sendSmtpEmail);
+  console.log("response", response);
 
-  res.status(200).json({ name });
+  res.status(200).json({ response });
 }
