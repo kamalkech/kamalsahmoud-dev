@@ -1,46 +1,33 @@
 {
-	"name": "kamadsahmoud-dev",
-	"version": "0.0.1",
-	"private": true,
-	"scripts": {
-		"dev": "vite dev",
-		"build": "vite build",
-		"preview": "vite preview",
-		"test": "playwright test",
-		"check": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json",
-		"check:watch": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json --watch",
-		"lint": "prettier --check --plugin-search-dir=. . && eslint .",
-		"format": "prettier --write --plugin-search-dir=. ."
-	},
-	"devDependencies": {
-		"@playwright/test": "^1.25.0",
-		"@sveltejs/adapter-auto": "next",
-		"@sveltejs/adapter-netlify": "next",
-		"@sveltejs/adapter-vercel": "next",
-		"@sveltejs/kit": "next",
-		"@typescript-eslint/eslint-plugin": "^5.27.0",
-		"@typescript-eslint/parser": "^5.27.0",
-		"autoprefixer": "^10.4.8",
-		"eslint": "^8.16.0",
-		"eslint-config-prettier": "^8.3.0",
-		"eslint-plugin-svelte3": "^4.0.0",
-		"postcss": "^8.4.16",
-		"prettier": "^2.6.2",
-		"prettier-plugin-svelte": "^2.7.0",
-		"svelte": "^3.44.0",
-		"svelte-check": "^2.7.1",
-		"svelte-preprocess": "^4.10.7",
-		"tailwindcss": "^3.1.8",
-		"tslib": "^2.3.1",
-		"typescript": "^4.7.4",
-		"vite": "^3.0.4"
-	},
-	"type": "module",
-	"dependencies": {
-		"@sendgrid/mail": "^7.7.0",
-		"mailtrap": "^3.0.0",
-		"sib-api-v3-sdk": "^8.4.2",
-		"sib-api-v3-typescript": "^2.2.2",
-		"svelte-formly": "^2.0.1"
-	}
+  "name": "kamal-gg",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "@sendinblue/client": "^3.2.2",
+    "formly-react": "^0.0.2",
+    "next": "12.3.0",
+    "node-mailjet": "^5.1.1",
+    "nodemailer": "^6.7.8",
+    "react": "18.2.0",
+    "react-dom": "18.2.0",
+    "sib-api-v3-typescript": "^2.2.2"
+  },
+  "devDependencies": {
+    "@types/node": "18.7.16",
+    "@types/nodemailer": "^6.4.5",
+    "@types/react": "18.0.18",
+    "@types/react-dom": "18.0.6",
+    "autoprefixer": "^10.4.8",
+    "eslint": "8.23.0",
+    "eslint-config-next": "12.3.0",
+    "postcss": "^8.4.16",
+    "tailwindcss": "^3.1.8",
+    "typescript": "4.8.3"
+  }
 }
