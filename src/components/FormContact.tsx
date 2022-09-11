@@ -95,7 +95,7 @@ const fields: IField[] = [
 
 const FormContact = () => {
   const onSubmit = async (data: IValue) => {
-    await fetch("/api/sendmail", {
+    const response = await fetch("/api/sendmail", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -103,8 +103,8 @@ const FormContact = () => {
       body: JSON.stringify(data.values),
     });
 
-    // const result = await response.json();
-    // console.log("result", result);
+    const result = await response.json();
+    console.log("result", result);
   };
 
   return (

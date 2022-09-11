@@ -21,16 +21,19 @@ export default async function handler(
   sendSmtpEmail.sender = { name: values.fullname, email: values.email };
   sendSmtpEmail.to = [{ email: "maroc.develop@gmail.com", name: "kamal.gg" }];
 
+  let name = "";
   apiInstance.sendTransacEmail(sendSmtpEmail).then(
     function (data) {
       console.log(
         "API called successfully. Returned data: " + JSON.stringify(data)
       );
+      name = "success";
     },
     function (error) {
       console.error(error);
+      name = "error";
     }
   );
 
-  res.status(200).json({ name: "okok" });
+  res.status(200).json({ name });
 }
