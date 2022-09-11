@@ -8,6 +8,12 @@
 			width="200px"
 			height="200px"
 		/>
+		<ul class="mt-4 glitch">
+			<li>
+				<a href="https://github.com/kamalkech">Linkedin</a>
+			</li>
+			<li><a href="https://github.com/kamalkech">Github</a></li>
+		</ul>
 	</div>
 
 	<div class="bioigraphy md:col-span-2">
