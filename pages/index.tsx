@@ -9,8 +9,8 @@ const Home: NextPage = () => {
   return (
     <div className="sm:w-full lg:w-1/2 m-auto md:mt-10 sm:mt-8 sm:px-4">
       <Head>
-        <title>Kamala Sahmoud</title>
-        <meta name="description" content="Personal website of kamal sahmoud" />
+        <title>Kamal</title>
+        <meta name="description" content="Personal website of kamal" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
