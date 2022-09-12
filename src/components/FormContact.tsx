@@ -15,7 +15,6 @@ const fields: IField[] = [
   {
     type: "input",
     name: "fullname",
-    value: "kamal",
     attributes: {
       type: "text",
       id: "fullname",
@@ -35,7 +34,6 @@ const fields: IField[] = [
   {
     type: "input",
     name: "email",
-    value: "kamal@email.com",
     attributes: {
       type: "email",
       id: "email",
@@ -55,7 +53,6 @@ const fields: IField[] = [
   {
     type: "input",
     name: "subject",
-    value: "test",
     attributes: {
       type: "text",
       id: "subject",
@@ -75,7 +72,6 @@ const fields: IField[] = [
   {
     type: "textarea",
     name: "message",
-    value: "salam alikom",
     attributes: {
       type: "text",
       id: "message",
